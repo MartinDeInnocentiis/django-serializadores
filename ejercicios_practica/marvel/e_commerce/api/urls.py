@@ -25,6 +25,9 @@ urlpatterns = [
         RetrieveUpdateComicAPIView.as_view()
     ),
     path('comics/delete/<int:pk>/', DestroyComicAPIView.as_view()),
+    path('users/list/', UserListAPIView.as_view(), name='user_class_list_api_view'),
+    path('users/<username>/', UserRetrieveAPIView.as_view(), name='user_class_retrieve_api_view'),
+    path('wish/list-create/', WishListAPIView.as_view(), name='wishlist_class_api_view'),
     # TODO: User Class API View.
 
     # TODO: Wish-list Class API View.
